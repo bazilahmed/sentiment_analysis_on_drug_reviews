@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drug Review ML Model Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<style>
+.boxed {
+  border: 15px solid rgb(150, 150, 150);
+  padding: 50px;
+  margin: 50px;
+  border-radius: 20px;
+}
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Drug Reviews Sentiment Analysis</h1>
+        <p>Machine Learning Live Demonstration Tool</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
+            <h5>Select the medical condition</h5>
+            <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+            <select id="selCondition" onchange="optionChanged(this.value)"></select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <h5>Select the drug name</h5>
+            <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+            <select id="selDrug" onchange="optionChanged(this.value)"></select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="form-group col-md-12">
+            <label for="comment">Review Comment:</label>
+            <textarea class="form-control" rows="6" id="review"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-9">
+          </div>
+          <div class="form-group col-md-3">
+              <!-- <input id="review-btn" type="submit" class="btn btn-primary btn-lg" value="Submit Review"> -->
+              <button id="review-btn" type="submit" class="btn btn-primary btn-lg">Submit Review</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="boxed" id="sentiment">   
+        </div>
+    </div>
+</div>
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
